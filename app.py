@@ -977,7 +977,7 @@ def user_id(secure: bool) -> str:
 
 
 def main():
-    st.set_page_config(page_title="Meridian Daily", page_icon="📰", layout="wide")
+    st.set_page_config(page_title="Daily Flaws of Tomorrow (DFoT)", page_icon="📰", layout="wide")
     app = get_app()
     st.markdown(CSS + (f"<link rel='stylesheet' href='{html.escape(app.cfg.font_css_url)}'>" if app.cfg.font_css_url else ""),
                 unsafe_allow_html=True)
