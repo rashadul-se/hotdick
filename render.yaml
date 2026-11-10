@@ -2,7 +2,9 @@
 services:
   - type: web
     name: meridian
-    runtime: image
+    runtime: docker
+    dockerfilePath: ./Containerfile
+    dockerContext: .
     image:
       url: ghcr.io/YOUR_ORG/meridian:1.0.0
       creds:
