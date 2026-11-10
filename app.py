@@ -1,4 +1,4 @@
-"""Meridian Daily - Streamlit newspaper (production skeleton).
+"""Daily FoT - Streamlit newspaper (production skeleton).
 
 Layers: Policy/Security (hidden rules) -> Repository (PostgreSQL+pgvector) ->
 services (Shortener, Vectorizer, Translator, Cart, Allocation, Publisher) -> NewsUI.
@@ -986,7 +986,7 @@ def main():
         st.warning("Too many requests. Please wait a moment."); st.stop()
     ui = NewsUI(app, uid)
     lang, q = ui.sidebar()
-    st.markdown("<div class='mast'><h1>Meridian Daily</h1><span>Independent · No tracking · Every language</span></div>",
+    st.markdown("<div class='mast'><h1>Daily FoT</h1><span>Localized · Premium · All about personalization</span></div>",
                 unsafe_allow_html=True)
     if code := st.query_params.get("s"):
         return ui.article(code, lang)
