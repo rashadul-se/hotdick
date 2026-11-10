@@ -4,7 +4,7 @@
 # Confirm plan names in the Render dashboard before applying.
 services:
   - type: web
-    name: FoT
+    name: DailyFoT
     runtime: docker
     dockerfilePath: ./Containerfile
     dockerContext: .
