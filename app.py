@@ -2207,7 +2207,7 @@ def user_id(secure: bool) -> str:
 
 
 def main():
-    st.set_page_config(page_title="Daily Flaws of Tomorrow (dFoT)", page_icon="📰", layout="wide")
+    st.set_page_config(page_title="The Daily Flaws of Tomorrow (dFoT)", page_icon="📰", layout="wide")
     app = get_app()
     if app.kv.incr("tick", 10) == 1 and app.news.release_due():
         st.cache_data.clear()
