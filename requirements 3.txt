@@ -1,0 +1,10 @@
+streamlit>=1.42
+Authlib>=1.3.2
+psycopg[binary,pool]>=3.2
+redis>=5.0
+cryptography>=43
+pillow>=10.4
+deep-translator>=1.11
+nltk>=3.9
+pandas>=2.2
+tzdata
