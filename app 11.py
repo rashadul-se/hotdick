@@ -1,4 +1,4 @@
-"""Meridian Daily - Streamlit newspaper (production skeleton).
+"""Daily FoT - Streamlit newspaper (production skeleton).
 
 Layers: Policy/Security (hidden rules) -> Repository (PostgreSQL+pgvector) ->
 services (Shortener, Vectorizer, Translator, Cart, Allocation, Publisher) -> NewsUI.
@@ -44,7 +44,7 @@ class Settings:
     dsn_community: str = os.getenv("DATABASE_URL_COMMUNITY", "")  # favourites, clippings, polls, votes
     google: bool = bool(os.getenv("GOOGLE_CLIENT_ID"))          # Google sign-in on when a client id is set
     # footer content (all optional; blank items are simply not shown)
-    footer_company: str = os.getenv("FOOTER_COMPANY", "Meridian Daily")
+    footer_company: str = os.getenv("FOOTER_COMPANY", "Daily FoT")
     footer_since: str = os.getenv("FOOTER_SINCE", "")
     footer_region: str = os.getenv("FOOTER_REGION", "")
     footer_address: str = os.getenv("FOOTER_ADDRESS", "")
@@ -1997,7 +1997,7 @@ def user_id(secure: bool) -> str:
 
 
 def main():
-    st.set_page_config(page_title="Meridian Daily", page_icon="📰", layout="wide")
+    st.set_page_config(page_title="Daily Flaws of Tomorrow", page_icon="📰", layout="wide")
     app = get_app()
     if app.kv.incr("tick", 10) == 1 and app.news.release_due():
         st.cache_data.clear()
@@ -2008,7 +2008,7 @@ def main():
         st.warning("Too many requests. Please wait a moment."); st.stop()
     ui = NewsUI(app, uid)
     lang, q = ui.sidebar()
-    st.markdown("<div class='mast'><h1>Meridian Daily</h1><span>Independent · No tracking · Every language</span></div>",
+    st.markdown("<div class='mast'><h1>Daily FoT</h1><span>Privileged · Localized · That you can think about</span></div>",
                 unsafe_allow_html=True)
     if code := st.query_params.get("s"):
         ui.article(code, lang)
