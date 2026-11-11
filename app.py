@@ -2218,7 +2218,7 @@ def main():
         st.warning("Too many requests. Please wait a moment."); st.stop()
     ui = NewsUI(app, uid)
     lang, q = ui.sidebar()
-    st.markdown("<div class='mast'><h1>Daily Flaws of Tomorrow</h1><span>dFoT · Privileged · Localized · That makes you think · Curated · Personalized</span></div>",
+    st.markdown("<div class='mast'><h1>The Daily Flaws of Tomorrow</h1><span>dFoT · Privileged · Localized · That makes you think · Curated · Personalized</span></div>",
                 unsafe_allow_html=True)
     if code := st.query_params.get("s"):
         ui.article(code, lang)
