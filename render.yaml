@@ -1,4 +1,4 @@
-# Render Blueprint: Meridian Daily (builds from this repo, no registry needed).
+# Render Blueprint: Daily FoT (builds from this repo, no registry needed).
 # Place this file, Containerfile, app.py and requirements.txt at the repo root.
 # If they live in a subfolder, change dockerfilePath and dockerContext (e.g. ./meridian/Containerfile, ./meridian).
 # Confirm plan names in the Render dashboard before applying.
@@ -83,7 +83,7 @@ services:
       - key: FOOTER_FACTCHECK
         sync: false
       - key: FOOTER_EMAILS
-        value: "daily_fot@gmail.com"
+        value: "info.dfot@gmail.com"
       - key: FOOTER_ADDRESS
         sync: false
       - key: FOOTER_SOCIAL
