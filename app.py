@@ -1,4 +1,4 @@
-"""Daily Flaws of Tomorrow (dFoT) - Streamlit newspaper (production skeleton).
+"""The Daily Flaws of Tomorrow (dFoT) - Streamlit newspaper (production skeleton).
 
 Layers: Policy/Security (hidden rules) -> Repository (PostgreSQL+pgvector) ->
 services (Shortener, Vectorizer, Translator, Cart, Allocation, Publisher) -> NewsUI.
@@ -2636,7 +2636,7 @@ def user_id(secure: bool) -> str:
 
 
 def main():
-    st.set_page_config(page_title="Daily Flaws of Tomorrow (dFoT)", page_icon="📰", layout="wide")
+    st.set_page_config(page_title="The Daily Flaws of Tomorrow (dFoT)", page_icon="📰", layout="wide")
     app = get_app()
     if app.kv.incr("tick", 10) == 1 and app.news.release_due():
         st.cache_data.clear()
@@ -2647,7 +2647,7 @@ def main():
         st.warning("Too many requests. Please wait a moment."); st.stop()
     ui = NewsUI(app, uid)
     lang, q = ui.sidebar()
-    st.markdown("<div class='mast'><h1>Daily Flaws of Tomorrow</h1><span>dFoT · Independent · No tracking · Every language</span></div>",
+    st.markdown("<div class='mast'><h1>The Daily Flaws of Tomorrow</h1><span>dFoT · Privileged · Localized · That makes you think · Curated · Personalized</span></div>",
                 unsafe_allow_html=True)
     if code := st.query_params.get("s"):
         ui.article(code, lang)
