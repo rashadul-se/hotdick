@@ -55,14 +55,14 @@ class Settings:
     dsn_community: str = os.getenv("DATABASE_URL_COMMUNITY", "")  # favourites, clippings, polls, votes
     google: bool = bool(os.getenv("GOOGLE_CLIENT_ID"))          # Google sign-in on when a client id is set
     # footer content (all optional; blank items are simply not shown)
-    footer_company: str = os.getenv("FOOTER_COMPANY", "Daily Flaws of Tomorrow (dFoT)")
+    footer_company: str = os.getenv("FOOTER_COMPANY", "The Daily Flaws of Tomorrow (dFoT)")
     footer_since: str = os.getenv("FOOTER_SINCE", "")
-    footer_region: str = os.getenv("FOOTER_REGION", "")
+    footer_region: str = os.getenv("FOOTER_REGION", "Asia & Asia Pacific")
     footer_address: str = os.getenv("FOOTER_ADDRESS", "")
     footer_phone: str = os.getenv("FOOTER_PHONE", "")            # comma separated
     footer_factcheck: str = os.getenv("FOOTER_FACTCHECK", "")    # fake-news checker line or number
-    footer_emails: str = os.getenv("FOOTER_EMAILS", "daily_fot@gmail.com")          # comma separated
-    footer_editor: str = os.getenv("FOOTER_EDITOR", "")
+    footer_emails: str = os.getenv("FOOTER_EMAILS", "info.dfot@gmail.com")          # comma separated
+    footer_editor: str = os.getenv("FOOTER_EDITOR", "Miss JoJo, Mr. MoJo")
     footer_publisher: str = os.getenv("FOOTER_PUBLISHER", "Rasha")
     footer_social: str = os.getenv("FOOTER_SOCIAL", "")          # JSON: {"facebook":"https://...", "x":"https://..."}
     desks: dict = field(default_factory=lambda: json.loads(os.getenv("DESK_KEYS", "{}")))
