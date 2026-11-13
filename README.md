@@ -6,7 +6,7 @@ and HR. It is private by default: no tracking and no ads unless a visitor opts i
 
 [![CI](https://github.com/rashadul-se/hotdick/actions/workflows/ci.yml/badge.svg)](https://github.com/rashadul-se/hotdick/actions/workflows/ci.yml)
 
-Live site: <https://dailyfot.onrender.com> · Publisher: Rasha · Contact: daily_fot@gmail.com
+Live site: <https://dailyfot.onrender.com> · Publisher: Rasha · Contact: info.dfot@gmail.com
 
 ---
 
