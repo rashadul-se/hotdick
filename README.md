@@ -255,6 +255,6 @@ docs/RUNBOOK.md      operations and incident guide
 Open a pull request. CI must pass and the checklist in the pull request template should be complete. Please add or update
 tests with any change to rules, money, privacy or security.
 
-**Licence:** none has been chosen yet, so all rights are reserved. Add a `LICENSE` file when you decide.
+**Licence:** CC-BC-ND 4.0
 
-**Contact:** daily_fot@gmail.com
+**Contact:** info.dfot@gmail.com
